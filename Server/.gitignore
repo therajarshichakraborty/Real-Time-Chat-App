@@ -1,0 +1,19 @@
+node_modules/
+
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.env
+.env.local
+
+Ignore build artifacts or any compiled files (if you use TypeScript or other compilers)
+build/
+dist/
+.vercel
+
+.idea/
+.vscode/
+node_modules/
+build/
+tmp/
+temp/
