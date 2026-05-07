@@ -6,7 +6,12 @@
   "scripts": {
     "dev": "bun --watch ./src/server.ts",
     "build": "tsc && cp ./package.json ./dist",
-    "start": "bun dist/server.js"
+    "start": "bun dist/server.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check .",
+    "type-check": "tsc --noEmit"
   },
   "keywords": [],
   "author": "Rajarshi Chakraborty",
@@ -26,9 +31,11 @@
     "passport-jwt": "^4.0.1",
     "prettier": "^3.8.3",
     "socket.io": "^4.8.1",
+    "winston": "^3.19.0",
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/bcrypt": "^5.0.2",
     "@types/cookie-parser": "^1.4.9",
     "@types/cors": "^2.8.19",
@@ -39,7 +46,9 @@
     "@types/node": "^22.18.10",
     "@types/passport": "^1.0.17",
     "@types/passport-jwt": "^4.0.1",
+    "eslint": "^10.3.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.59.2"
   }
 }
