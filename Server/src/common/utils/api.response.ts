@@ -1,18 +1,32 @@
-class ApiResponse<T> {
-  public statusCode: number;
-  public success: boolean;
-  public message: string;
-  public data: T | null;
+import { Response } from "express";
 
-  constructor(
-    statusCode: number,
-    message = "Success",
-    data: T | null = null,
-  ) {
-    this.statusCode = statusCode;
-    this.success = statusCode < 400;
-    this.message = message;
-    this.data = data;
+class ApiResponse {
+  static ok<T>(
+    res: Response,
+    message: string,
+    data: T | null = null
+  ): Response {
+    return res.status(200).json({
+      success: true,
+      message,
+      data,
+    });
+  }
+
+  static created<T>(
+    res: Response,
+    message: string,
+    data: T | null = null
+  ): Response {
+    return res.status(201).json({
+      success: true,
+      message,
+      data,
+    });
+  }
+
+  static noContent(res: Response): Response {
+    return res.status(204).send();
   }
 }
 
