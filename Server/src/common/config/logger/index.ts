@@ -1,6 +1,6 @@
 import path from "node:path";
 import winston from "winston";
-const logDir = path.join(process.cwd(), "src/common/logs");
+const logDir = path.join(process.cwd(), "src/common/config/logs");
 
 const consoleFormat = winston.format.combine(
   winston.format.colorize(),

@@ -1,10 +1,25 @@
-import {createServer} from "node:http";
+import { createServer } from "node:http";
 import app from "./app";
-import logger from "./common/logger";
+import { env } from "./common/config/env";
+import logger from "./common/config/logger";
 
-const PORT = process.env.PORT || 8000;
 const server = createServer(app);
 
-server.listen(PORT, () => {
-  logger.warn(`Server running on port http://localhost:${PORT}`);
-});
+const runServer = async (): Promise<void> => {
+  server.listen(env.PORT, () => {
+    logger.info(`Server running at http://localhost:${env.PORT}`);
+  });
+};
+
+runServer()
+  .then(() => {
+    logger.info("Server started successfully");
+  })
+  .catch((error) => {
+    logger.error({
+      message: "Failed to start server",
+      error,
+    });
+
+    process.exit(1);
+  });

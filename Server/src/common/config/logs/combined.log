@@ -1,0 +1,8 @@
+{"level":"warn","message":"Server running on port http://localhost:4000","timestamp":"2026-05-07 19:15:47"}
+{"level":"warn","message":"Server running on port http://localhost:4000","timestamp":"2026-05-07 19:29:46"}
+{"level":"info","message":"GET /","timestamp":"2026-05-07 19:29:50"}
+{"level":"info","message":"GET /favicon.ico","timestamp":"2026-05-07 19:29:50"}
+{"level":"info","message":"Server started successfully","timestamp":"2026-05-07 19:38:15"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2026-05-07 19:38:15"}
+{"level":"info","message":"Server started successfully","timestamp":"2026-05-07 19:41:28"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2026-05-07 19:41:28"}
